@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  labels:
+    - ⬆️⬇️ dependencies
+  commit-message:
+    prefix: ⬆️
+  schedule:
+    interval: monthly
+    time: "03:00"
+    timezone: US/Central
+- package-ecosystem: bundler
+  directory: "/"
+  labels:
+    - ⬆️⬇️ dependencies
+  commit-message:
+    prefix: ⬆️
+  schedule:
+    interval: monthly
+    time: "03:00"
+    timezone: US/Central
