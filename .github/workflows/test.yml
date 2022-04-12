@@ -16,12 +16,12 @@ jobs:
           restore-keys: v1/${{ runner.os }}/ruby-2.6/
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
       - uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: v1/${{ runner.os }}/node-12/${{ hashFiles('**/package-lock.lock') }}
-          restore-keys: v1/${{ runner.os }}/node-12/
+          key: v1/${{ runner.os }}/node-14/${{ hashFiles('**/package-lock.lock') }}
+          restore-keys: v1/${{ runner.os }}/node-14/
       - run: make test
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
