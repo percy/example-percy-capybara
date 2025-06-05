@@ -1,5 +1,7 @@
 require 'capybara/rspec'
 require 'percy/capybara'
+require 'webrick'
+require 'rack'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -32,6 +34,6 @@ RSpec.configure do |config|
 
   # Setup for Capybara to test static files served by Rack
   Capybara.server_port = 3003
-  Capybara.server = :puma, { Silent: true }
-  Capybara.app = Rack::File.new(Dir.pwd)
+  Capybara.server = :webrick
+  Capybara.app = Rack::Files.new(Dir.pwd)
 end
