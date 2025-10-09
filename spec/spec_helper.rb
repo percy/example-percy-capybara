@@ -2,6 +2,7 @@ require 'capybara/rspec'
 require 'percy/capybara'
 require 'webrick'
 require 'rack'
+require 'selenium-webdriver'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -28,7 +29,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 
-  # See https://github.com/teamcapybara/capybara#selecting-the-driver for other options
+  # See https://github.com/teamcapybara/capybara#selecting-the-driver for other options  
   Capybara.default_driver = :selenium_headless
   Capybara.javascript_driver = :selenium_headless
 
