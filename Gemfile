@@ -9,6 +9,6 @@ group :test, :development do
   gem 'webrick'
   gem 'capybara', '~> 3.31'
   gem 'rspec', '~> 3.5'
-  gem 'selenium-webdriver', '4.1.0'
+  gem 'selenium-webdriver', '4.36.0'
   gem 'percy-capybara', '5.0.0'
 end
