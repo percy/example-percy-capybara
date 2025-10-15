@@ -2,6 +2,7 @@ require 'capybara/rspec'
 require 'percy/capybara'
 require 'webrick'
 require 'rack'
+require 'selenium-webdriver'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
