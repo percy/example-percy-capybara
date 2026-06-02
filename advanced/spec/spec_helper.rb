@@ -18,5 +18,5 @@ RSpec.configure do |config|
 
   Capybara.server_port = ENV.fetch('PORT_NUMBER', '3004').to_i
   Capybara.server = :webrick
-  Capybara.app = Rack::Files.new(File.expand_path('..', __dir__))
+  Capybara.app = Rack::Files.new(File.expand_path('../..', __dir__))
 end
