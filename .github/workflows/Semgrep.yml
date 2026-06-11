@@ -26,8 +26,9 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      # A Docker image with Semgrep installed. Do not change this.
-      image: returntocorp/semgrep
+      # A Docker image with Semgrep installed (returntocorp/semgrep is
+      # deprecated and no longer pullable; semgrep/semgrep is the current image).
+      image: semgrep/semgrep
 
     # Skip any PR created by dependabot to avoid permission issues:
     if: (github.actor != 'dependabot[bot]')
